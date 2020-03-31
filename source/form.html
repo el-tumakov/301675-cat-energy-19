@@ -26,7 +26,60 @@
     </nav>
   </header>
   <main class="main-content">
-    <!-- Разметка в этом блоке появится в следующем задании -->
+    <section class="main-content__form program-form">
+      <div class="wrapper">
+        <h1 class="main-content__title">Подбор программы</h1>
+        <p class="program-form__description">
+          Заполните анкету и мы подберем программу питания для вашего кота
+        </p>
+      </div>
+      <form class="program-form__form" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset class="program-form__fieldset program-form__fieldset--no-title">
+          <legend class="program-form__legend visually-hidden">Информация о коте</legend>
+          <div class="program-form__wrap wrapper">
+            <label class="program-form__label" for="cat-name" >Имя:*</label>
+            <input class="program-form__input-text" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+            <label class="program-form__label" for="cat-weight">Вес (кг):*</label>
+            <input class="program-form__input-text" id="cat-weight" type="text" name="cat-weight" placeholder="7" required>
+            <label class="program-form__label" for="cat-age">Возраст (лет):</label>
+            <input class="program-form__input-text" id="cat-age" type="text" name="cat-age" placeholder="7">
+          </div>
+        </fieldset>
+        <fieldset class="program-form__fieldset program-form__fieldset--no-title">
+          <legend class="program-form__legend visually-hidden">Цель программы</legend>
+          <input class="program-form__input-radio visually-hidden" id="lose-weight" type="radio" name="purpose" value="lose-weight" checked>
+          <label class="program-form__label" for="lose-weight">Похудение</label>
+          <input class="program-form__input-radio visually-hidden" id="set-weight" type="radio" name="purpose" value="set-weight">
+          <label class="program-form__label" for="set-weight">Набор Массы</label>
+          <input class="program-form__input-radio visually-hidden" id="not-sure" type="radio" name="purpose" value="not-sure">
+          <label class="program-form__label" for="not-sure">Не знаю (нужен вам совет)</label>
+        </fieldset>
+        <fieldset class="program-form__fieldset">
+          <legend class="program-form__legend">Контактные данные (владельц кота)</legend>
+          <label class="program-form__label" for="form-email">E-mail:*</label>
+          <input class="program-form__input-text program-form__input-text--email" id="form-email" type="email"  name="owner-email" placeholder="kuklachev@gmail.com" required>
+          <label class="program-form__label" for="form-tel">Телефон:*</label>
+          <input class="program-form__input-text program-form__input-text--tel" id="form-tel" type="tel" name="owner-tel" placeholder="8 (960) 900-60-90">
+        </fieldset>
+        <fieldset class="program-form__fieldset">
+          <legend class="program-form__legend">Комментарий</legend>
+          <textarea class="program-form__comment" name="comment" id="form-comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="program-form__fieldset">
+          <legend class="program-form__legend">Дополнительно</legend>
+          <input class="program-form__input-checkbox visually-hidden" id="checkbox-sugar" type="checkbox" name="sugar" checked>
+          <label class="program-form__label" for="checkbox-sugar">Сахарозаменитель</label>
+          <input class="program-form__input-checkbox visually-hidden" id="checkbox-water" type="checkbox" name="water">
+          <label class="program-form__label" for="checkbox-water">Питьевая вода</label>
+          <input class="program-form__input-checkbox visually-hidden" id="checkbox-milk" type="checkbox" name="milk">
+          <label class="program-form__label" for="checkbox-milk">Молоко</label>
+          <input class="program-form__input-checkbox visually-hidden" id="checkbox-vitamins" type="checkbox" name="vitamins">
+          <label class="program-form__label" for="checkbox-vitamins">Витамины</label>
+        </fieldset>
+        <button class="program-form__submit button" type="submit">Отправить заявку</button>
+        <small class="program-form__small-text">* — Обязательные поля</small>
+      </form>
+    </section>
   </main>
   <footer class="main-footer">
     <img class="main-footer__logo-title" src="#" alt="Название компании — Cat Energy">
