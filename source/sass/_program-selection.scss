@@ -1,0 +1,25 @@
+.program-selection {
+  font-weight: 400;
+  text-align: center;
+  color: $font-color3;
+
+  background-color: $primary-color;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.program-selection__title {
+  font-weight: inherit;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.program-selection__slogan {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.program-selection__link {
+  font-size: 14px;
+}
