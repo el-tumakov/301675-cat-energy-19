@@ -1,0 +1,27 @@
+.program-unit {
+  font-weight: 400;
+  color: $font-color1;
+
+  background-color: $bg-color2;
+}
+
+.program-unit__title {
+  font-weight: inherit;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.program-unit__description {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: $font-color2;
+}
+
+.program-unit__link {
+  font-size: 16px;
+  line-height: 16px;
+  color: $font-color1;
+  text-transform: uppercase;
+}
