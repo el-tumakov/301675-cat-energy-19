@@ -1,0 +1,26 @@
+.product {
+  font-weight: 400;
+}
+
+.product__title {
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: $font-color1;
+  text-transform: uppercase;
+}
+
+.product__info {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Arial", sans-serif;
+  color: $font-color2;
+}
+
+.product__row-title {
+  font-weight: inherit;
+}
+
+.product__col {
+  text-align: right;
+}
