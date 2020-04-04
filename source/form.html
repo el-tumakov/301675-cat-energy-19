@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
-<body>
+<body class="page">
   <header class="main-header">
     <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-image" src="#" alt="Логотип компании">
@@ -30,7 +30,7 @@
   <main class="main-content">
     <section class="main-content__form program-form">
       <div class="wrapper">
-        <h1 class="main-content__title">Подбор программы</h1>
+        <h1 class="main-content__section-title">Подбор программы</h1>
         <p class="program-form__description">
           Заполните анкету и мы подберем программу питания для вашего кота
         </p>
@@ -54,10 +54,10 @@
           <input class="program-form__input-radio visually-hidden" id="set-weight" type="radio" name="purpose" value="set-weight">
           <label class="program-form__label" for="set-weight">Набор Массы</label>
           <input class="program-form__input-radio visually-hidden" id="not-sure" type="radio" name="purpose" value="not-sure">
-          <label class="program-form__label" for="not-sure">Не знаю (нужен вам совет)</label>
+          <label class="program-form__label" for="not-sure">Не знаю (нужен ваш совет)</label>
         </fieldset>
         <fieldset class="program-form__fieldset">
-          <legend class="program-form__legend">Контактные данные (владельц кота)</legend>
+          <legend class="program-form__legend">Контактные данные (владельца кота)</legend>
           <label class="program-form__label" for="form-email">E-mail:*</label>
           <input class="program-form__input-text program-form__input-text--email" id="form-email" type="email"  name="owner-email" placeholder="kuklachev@gmail.com" required>
           <label class="program-form__label" for="form-tel">Телефон:*</label>
