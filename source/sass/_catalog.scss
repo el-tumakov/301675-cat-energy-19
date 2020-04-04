@@ -1,0 +1,24 @@
+.catalog__more {
+  font-weight: 400;
+  text-align: center;
+}
+
+.catalog__more-title {
+  font-size: 16px;
+  line-height: 20px;
+  color: $font-color1;
+  text-transform: uppercase;
+}
+
+.catalog__more-description {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Arial", sans-serif;
+  color: $font-color2;
+}
+
+.catalog__show-all {
+  color: $font-color2;
+
+  background-color: $bg-color2;
+}
