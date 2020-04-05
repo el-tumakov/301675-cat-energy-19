@@ -17,12 +17,12 @@
 
 .program-form__input-text::placeholder,
 .program-form__comment::placeholder {
-  color: $font-color2;
+  color: $font-color-minor;
 }
 
 .program-form__small-text {
   font-size: 14px;
   line-height: 16px;
-  font-family: $font2;
-  color: $font-color2;
+  font-family: $font-minor;
+  color: $font-color-minor;
 }

@@ -1,10 +1,10 @@
 .contacts {
   font-weight: 400;
 
-  background-color: $bg-color1;
+  background-color: $bg-color-main;
 
   &--gray {
-    background-color: $bg-color2;
+    background-color: $bg-color-minor;
   }
 }
 
@@ -17,6 +17,6 @@
 .contacts__address {
   font-size: 14px;
   line-height: 20px;
-  font-family: $font2;
-  color: $font-color2;
+  font-family: $font-minor;
+  color: $font-color-minor;
 }
