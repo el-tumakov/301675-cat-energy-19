@@ -1,0 +1,28 @@
+.program-form__description {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__fieldset {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__legend {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.program-form__input-text::placeholder,
+.program-form__comment::placeholder {
+  color: $font-color-minor;
+}
+
+.program-form__small-text {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $font-minor;
+  color: $font-color-minor;
+}

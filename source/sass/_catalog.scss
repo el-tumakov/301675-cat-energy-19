@@ -6,19 +6,19 @@
 .catalog__more-title {
   font-size: 16px;
   line-height: 20px;
-  color: $font-color1;
+  color: $font-color-main;
   text-transform: uppercase;
 }
 
 .catalog__more-description {
   font-size: 12px;
   line-height: 16px;
-  font-family: "Arial", sans-serif;
-  color: $font-color2;
+  font-family: $font-minor;
+  color: $font-color-minor;
 }
 
 .catalog__show-all {
-  color: $font-color2;
+  color: $font-color-minor;
 
-  background-color: $bg-color2;
+  background-color: $bg-color-minor;
 }

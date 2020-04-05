@@ -1,8 +1,8 @@
 .program-unit {
   font-weight: 400;
-  color: $font-color1;
+  color: $font-color-main;
 
-  background-color: $bg-color2;
+  background-color: $bg-color-minor;
 }
 
 .program-unit__title {
@@ -15,13 +15,13 @@
 .program-unit__description {
   font-size: 14px;
   line-height: 18px;
-  font-family: "Arial", sans-serif;
-  color: $font-color2;
+  font-family: $font-minor;
+  color: $font-color-minor;
 }
 
 .program-unit__link {
   font-size: 16px;
   line-height: 16px;
-  color: $font-color1;
+  color: $font-color-main;
   text-transform: uppercase;
 }

@@ -1,0 +1,22 @@
+.contacts {
+  font-weight: 400;
+
+  background-color: $bg-color-main;
+
+  &--gray {
+    background-color: $bg-color-minor;
+  }
+}
+
+.contacts__slogan {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $font-minor;
+  color: $font-color-minor;
+}

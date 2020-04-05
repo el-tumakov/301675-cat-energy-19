@@ -6,15 +6,15 @@
   font-weight: inherit;
   font-size: 16px;
   line-height: 20px;
-  color: $font-color1;
+  color: $font-color-main;
   text-transform: uppercase;
 }
 
 .product__info {
   font-size: 12px;
   line-height: 16px;
-  font-family: "Arial", sans-serif;
-  color: $font-color2;
+  font-family: $font-minor;
+  color: $font-color-minor;
 }
 
 .product__row-title {

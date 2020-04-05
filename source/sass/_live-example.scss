@@ -1,0 +1,43 @@
+.live-example {
+  font-weight: 400;
+
+  background-color: $bg-color-minor;
+}
+
+.live-example__description {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-minor;
+  color: $font-color-minor;
+}
+
+.live-example__head {
+  font-weight: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $font-minor;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.live-example__col {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.live-example__head--food,
+.live-example__col--food {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $font-main;
+  text-transform: uppercase;
+  text-align-last: left;
+}
+
+.live-example__compare-text {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
