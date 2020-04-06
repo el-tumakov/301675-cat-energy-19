@@ -1,3 +1,9 @@
 .main-footer {
   background-color: $bg-color-minor;
 }
+
+@media (min-width: $tablet-width) {
+  .main-footer__bottom {
+    display: flex;
+  }
+}
