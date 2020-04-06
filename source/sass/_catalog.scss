@@ -1,3 +1,11 @@
+.catalog__list {
+  padding: 0;
+}
+
+.catalog__item {
+  padding: 0 20px;
+}
+
 .catalog__more {
   font-weight: 400;
   text-align: center;
@@ -21,4 +29,28 @@
   color: $font-color-minor;
 
   background-color: $bg-color-minor;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    flex-grow: 1;
+    width: 324px;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__list {
+    padding: 0 70px;
+  }
+
+  .catalog__item {
+    width: 245px;
+    padding: 0 40px;
+  }
 }
