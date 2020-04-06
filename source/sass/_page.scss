@@ -3,5 +3,7 @@ a {
 }
 
 .page {
+  box-sizing: border-box;
+
   font-family: $font-main;
 }
