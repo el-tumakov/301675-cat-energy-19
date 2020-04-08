@@ -1,3 +1,22 @@
 .main-header {
-  background-color: $bg-color-main;
+  min-height: 65px;
+}
+
+.main-header__top {
+  display: flex;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    display: flex;
+    min-height: 106px;
+  }
+
+  .main-header__menu-toggle {
+    display: none;
+  }
+
+  .main-header__nav-list {
+    display: flex;
+  }
 }

@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Подбор программы для вашего питомца от Cat Energy</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body class="page">
-  <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="#" alt="Логотип компании">
-    </a>
-    <img class="main-header__logo-title" src="#" alt="Название компании — Cat Energy">
-    <nav class="main-header__nav navigation">
+  <header class="main-header wrapper">
+    <div class="main-header__top">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" src="#" alt="Логотип компании">
+      </a>
+      <img class="main-header__logo-title" src="#" alt="Название компании — Cat Energy">
       <button class="main-header__menu-toggle navigation__toggle" type="button">Меню</button>
+    </div>
+    <nav class="main-header__nav navigation">
       <ul class="main-header__nav-list navigation__list">
         <li class="navigation__item">
           <a class="navigation__link" href="index.html">Главная</a>
@@ -97,23 +100,25 @@
       </div>
       <img class="contacts__map" src="#" alt="Расположение офиса на карте">
     </section>
-    <img class="main-footer__logo-title" src="#" alt="Название компании — Cat Energy">
-    <div class="main-footer__social social wrapper">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vk" href="#">Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--inst" href="#">Инстаграмм</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--fb" href="#">Фейсбук</a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-footer__copyright copyright wrapper">
-      <a class="copyright__company" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">Логотип разработчика</a>
+    <div class="main-footer__bottom wrapper">
+      <img class="main-footer__logo-title" src="#" alt="Название компании — Cat Energy">
+      <div class="main-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--inst" href="#">Инстаграмм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="#">Фейсбук</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__copyright copyright">
+        <a class="copyright__company" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">Логотип разработчика</a>
+      </div>
     </div>
   </footer>
 </body>
