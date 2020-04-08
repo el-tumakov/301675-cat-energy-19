@@ -8,6 +8,10 @@
   }
 }
 
+.contacts__info {
+  display: flex;
+}
+
 .contacts__slogan {
   font-size: 16px;
   line-height: 20px;
@@ -19,4 +23,39 @@
   line-height: 20px;
   font-family: $font-minor;
   color: $font-color-minor;
+}
+
+.contacts__map {
+  display: block;
+  width: 100%;
+  height: 360px;
+
+  background-color: #aadaff;
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+
+    padding-top: 100px;
+  }
+
+  .contacts__info {
+    position: relative;
+    z-index: 1;
+
+    width: 570px;
+    min-height: 200px;
+    margin-bottom: 100px;
+
+    background-color: $bg-color-main;
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-height: 400px;
+  }
 }
