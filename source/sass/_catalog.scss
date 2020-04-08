@@ -2,10 +2,6 @@
   padding: 0;
 }
 
-.catalog__item {
-  padding: 0 20px;
-}
-
 .catalog__more {
   font-weight: 400;
   text-align: center;
@@ -40,7 +36,6 @@
   .catalog__item {
     flex-grow: 1;
     width: 324px;
-    padding: 0 30px;
   }
 }
 
@@ -51,6 +46,5 @@
 
   .catalog__item {
     width: 245px;
-    padding: 0 40px;
   }
 }

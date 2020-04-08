@@ -1,18 +1,19 @@
 .wrapper {
-  min-width: 280px;
+  width: 280px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
   .wrapper {
-    min-width: 708px;
+    width: 708px;
     padding: 0 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .wrapper {
-    min-width: 1220px;
+    width: 1220px;
     padding: 0 110px;
   }
 }
