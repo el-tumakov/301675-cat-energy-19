@@ -11,3 +11,9 @@
   text-align: center;
   color: $font-color-inverse;
 }
+
+@media (min-width: $desktop-width) {
+  .more-products__wrap {
+    display: flex;
+  }
+}
