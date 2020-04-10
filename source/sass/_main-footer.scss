@@ -7,3 +7,10 @@
     display: flex;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-footer__bottom {
+    position: relative;
+    z-index: 1;
+  }
+}

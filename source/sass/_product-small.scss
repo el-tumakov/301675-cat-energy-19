@@ -11,3 +11,25 @@
   font-family: $font-minor;
   color: $font-color-minor;
 }
+
+@media (min-width: $tablet-width) {
+  .product-small {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product-small__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-small {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .product-small__button {
+    width: 245px;
+  }
+}
