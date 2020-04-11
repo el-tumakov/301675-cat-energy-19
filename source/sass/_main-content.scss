@@ -10,23 +10,3 @@
     line-height: 24px;
   }
 }
-
-.main-content__program-selection {
-  width: 280px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-@media (min-width: $tablet-width) {
-  .main-content__program-selection {
-    width: 708px;
-    padding: 0 30px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-content__program-selection {
-    width: 1220px;
-    padding: 0 110px;
-  }
-}
