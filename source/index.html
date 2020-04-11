@@ -8,24 +8,25 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body class="page">
-  <header class="main-header wrapper">
+  <header class="main-header">
     <div class="main-header__top">
       <a class="main-header__logo">
-        <img class="main-header__logo-image" src="#" alt="Логотип компании">
+        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип компании">
       </a>
-      <img class="main-header__logo-title" src="#" alt="Название компании — Cat Energy">
-      <button class="main-header__menu-toggle navigation__toggle" type="button">Меню</button>
     </div>
-    <nav class="main-header__nav navigation">
-      <ul class="main-header__nav-list navigation__list">
+    <nav class="main-header__nav navigation navigation--closed navigation--nojs">
+      <button class="main-header__menu-toggle navigation__toggle" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
+      <ul class="navigation__list">
         <li class="navigation__item">
-          <a class="navigation__link">Главная</a>
+          <a class="navigation__link navigation__link--active navigation__link--inverse navigation__link--inverse-active">Главная</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+          <a class="navigation__link navigation__link--inverse" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="form.html">Подбор программы</a>
+          <a class="navigation__link navigation__link--inverse" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -181,5 +182,22 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.navigation');
+    var navToggle = document.querySelector('.navigation__toggle');
+
+    navMain.classList.remove('navigation--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('navigation--closed')) {
+        navMain.classList.remove('navigation--closed');
+        navMain.classList.add('navigation--opened');
+      } else {
+        navMain.classList.add('navigation--closed');
+        navMain.classList.remove('navigation--opened');
+      }
+    });
+  </script>
 </body>
 </html>
