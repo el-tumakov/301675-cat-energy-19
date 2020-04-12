@@ -1,5 +1,21 @@
+.programs__list {
+  padding: 0;
+
+  list-style: none;
+}
+
 @media (min-width: $desktop-width) {
   .programs__list {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  .programs__item {
+    display: flex;
+    margin-right: 80px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 }

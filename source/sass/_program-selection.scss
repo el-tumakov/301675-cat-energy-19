@@ -55,14 +55,14 @@
 
 .program-selection__link {
   margin: 0 auto;
-  margin-top: 2px;
+  margin-top: 4px;
 
   font-size: 14px;
 }
 
 @media (min-width: $tablet-width) {
   .program-selection {
-    min-height: 840px;
+    min-height: 821px;
 
     color: $font-color-main;
 
@@ -124,7 +124,7 @@
     position: static;
 
     display: flex;
-    min-height: 696px;
+    min-height: 640px;
 
     &::after {
       top: 0;
