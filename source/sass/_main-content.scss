@@ -1,7 +1,9 @@
 .main-content__section-title {
+  margin: 20px 0;
+
   font-weight: 400;
   font-size: 36px;
-  line-height: 60px;
+  line-height: 54px;
   text-align: left;
   color: $font-color-main;
 
@@ -13,4 +15,21 @@
 
 .main-content__programs {
   margin-top: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-content__section-title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .main-content__advantages {
+    margin-top: 45px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-content__advantages {
+    margin-top: 43px;
+  }
 }
