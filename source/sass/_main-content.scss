@@ -11,6 +11,12 @@
     font-size: 24px;
     line-height: 24px;
   }
+
+  &--catalog {
+    margin: 18px 0;
+    padding: 0 20px;
+    margin-bottom: 31px;
+  }
 }
 
 .main-content__programs {
@@ -21,6 +27,11 @@
   .main-content__section-title {
     font-size: 60px;
     line-height: 60px;
+
+    &--catalog {
+      margin-top: 33px;
+      padding: 0 30px;
+    }
   }
 
   .main-content__advantages {
@@ -31,5 +42,12 @@
 @media (min-width: $desktop-width) {
   .main-content__advantages {
     margin-top: 43px;
+  }
+
+  .main-content__section-title {
+    &--catalog {
+      margin-top: 75px;
+      padding: 0 110px;
+    }
   }
 }
