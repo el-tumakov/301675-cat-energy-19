@@ -1,10 +1,62 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .copyright__company {
+  width: 50%;
+
   font-size: 16px;
   line-height: 16px;
   font-family: $font-minor;
   color: $font-color-minor;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__logo {
-  font-size: 0;
+  svg path {
+    fill: $font-color-minor;
+  }
+
+  &:hover svg path {
+    fill: $primary-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    justify-content: flex-end;
+    width: 30%;
+  }
+
+  .copyright__company {
+    width: auto;
+    margin-right: 23px;
+
+    &:hover {
+      color: $font-color-minor;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    width: 245px;
+  }
 }

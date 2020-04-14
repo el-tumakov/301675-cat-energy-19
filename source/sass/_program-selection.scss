@@ -1,6 +1,7 @@
 .program-selection {
   position: relative;
 
+  min-width: 320px;
   min-height: 480px;
 
   font-weight: 400;
@@ -20,51 +21,146 @@
     background-color: #63a73a;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
+    background-position: center 0;
   }
 }
 
 .program-selection__title {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding-top: 27px;
+
   font-weight: inherit;
   font-size: 36px;
   line-height: 36px;
 }
 
 .program-selection__slogan {
+  width: 280px;
+  margin: 0 auto;
+
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
 }
 
+.program-selection__image {
+  display: block;
+  width: 280px;
+  height: 270px;
+  margin: 0 auto;
+  margin-top: 28px;
+}
+
 .program-selection__link {
+  margin: 0 auto;
+  margin-top: 4px;
+
   font-size: 14px;
 }
 
 @media (min-width: $tablet-width) {
   .program-selection {
-    min-height: 840px;
+    min-height: 821px;
+
+    color: $font-color-main;
 
     &::after {
       display: none;
     }
+
+    .wrapper {
+      min-width: 619px;
+      padding-left: 119px;
+    }
+  }
+
+  .program-selection__title {
+    width: 430px;
+    margin: 0;
+    margin-bottom: 41px;
+    padding-top: 33px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .program-selection__slogan {
+    width: 295px;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .program-selection__image {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    z-index: -1;
+
+    width: 709px;
+    height: 609px;
+  }
+
+  .program-selection__link {
+    width: 245px;
+    min-width: 245px;
+    min-height: 26px;
+    margin: 0;
+    margin-top: 48px;
+    padding-top: 14px;
+
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .program-selection {
+    position: static;
+
     display: flex;
-    min-height: 696px;
+    min-height: 640px;
 
     &::after {
-      position: static;
+      top: 0;
+      left: 50%;
 
       display: block;
-      height: auto;
-      margin-top: -106px;
+      width: 50%;
+      height: 695px;
+
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-position: -1px 0;
+    }
+
+    .wrapper {
+      position: relative;
+
+      width: 1250px;
+      padding: 0;
+      padding-left: 190px;
     }
   }
 
-  .program-selection__wrapper {
-    width: 610px;
-    min-width: 610px;
+  .program-selection__title {
+    padding-top: 110px;
+  }
+
+  .program-selection__image {
+    top: 0;
+    left: 580px;
+    z-index: 1;
+
+    width: 552px;
+    height: 499px;
+  }
+
+  .program-selection__link {
+    margin-top: 52px;
   }
 }
