@@ -132,15 +132,14 @@
         </div>
       </div>
       <div class="live-example__bottom">
-        <div class="wrapper">
-          <img class="live-example__image" src="#" alt="Изображение кота до и после">
-          <div class="live-example__compare">
-            <span class="live-example__compare-text">Было</span>
-            <div class="live-example__bar">
-              <div class="live-example__active-bar"></div>
-            </div>
-            <span class="live-example__compare-text">Стало</span>
+        <img class="live-example__image live-example__image--before live-example__image--visible" src="img/before-mobile@1x.png" width="320" height="240" alt="Изображение кота до смены корма">
+        <img class="live-example__image live-example__image--after" src="img/after-mobile@1x.png" width="320" height="240" alt="Изображение кота после смены корма">
+        <div class="live-example__compare">
+          <span class="live-example__compare-text">Было</span>
+          <div class="live-example__bar">
+            <div class="live-example__active-bar"></div>
           </div>
+          <span class="live-example__compare-text">Стало</span>
         </div>
       </div>
     </section>
@@ -210,6 +209,25 @@
       } else {
         navMain.classList.add('navigation--closed');
         navMain.classList.remove('navigation--opened');
+      }
+    });
+  </script>
+
+  <script>
+    var catBefore = document.querySelector('.live-example__image--before');
+    var catAfter = document.querySelector('.live-example__image--after');
+    var toggle = document.querySelector('.live-example__bar');
+    var activeBar = document.querySelector('.live-example__active-bar');
+
+    toggle.addEventListener('click', function () {
+      if (catBefore.classList.contains('live-example__image--visible')) {
+        catBefore.classList.remove('live-example__image--visible');
+        catAfter.classList.add('live-example__image--visible');
+        activeBar.setAttribute("style", "right: 7px; left: auto");
+      } else {
+        catBefore.classList.add('live-example__image--visible');
+        catAfter.classList.remove('live-example__image--visible');
+        activeBar.setAttribute("style", "left: 7px; right: auto");
       }
     });
   </script>
