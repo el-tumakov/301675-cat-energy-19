@@ -1,15 +1,71 @@
+.more-products__title {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  &::after {
+    content: "";
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 53px;
+    height: 3px;
+    margin-top: 6px;
+
+    background-color: $primary-color;
+  }
+}
+
+.more-products__title-text {
+  min-width: 227px;
+  padding-right: 20px;
+}
+
+.more-products__wrap {
+  margin-top: 34px;
+}
+
 .more-products__list {
   padding: 0;
+
   list-style: none;
+
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .more-products__gift {
+  position: relative;
+
+  width: 280px;
+  min-height: 102px;
+  margin: 0 auto;
+  margin-top: 39px;
+  margin-bottom: 35px;
+  padding-top: 187px;
+
   background-color: $primary-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 113px;
+
+    width: 55px;
+    height: 60px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .more-products__offer {
+  display: block;
+  width: 170px;
+  margin: 0 auto;
+
   font-size: 16px;
   line-height: 20px;
   font-family: $font-minor;
