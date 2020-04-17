@@ -223,6 +223,7 @@
 @media (min-width: $tablet-width) {
   .live-example {
     padding-top: 33px;
+    padding-bottom: 0;
 
     background-color: $bg-color-main;
     border-top: 1px solid #e6e6e6;

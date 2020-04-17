@@ -40,6 +40,11 @@
       margin-top: 33px;
       padding: 0 30px;
     }
+
+    &--small {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   .main-content__advantages {
@@ -48,6 +53,10 @@
 
   .main-content__example {
     margin-top: -47px;
+  }
+
+  .main-content__more-products {
+    margin-top: -93px;
   }
 }
 
@@ -64,5 +73,10 @@
       margin-bottom: 31px;
       padding: 0 110px;
     }
+  }
+
+  .main-content__more-products {
+    margin-top: -69px;
+    margin-bottom: 71px;
   }
 }

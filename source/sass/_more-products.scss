@@ -3,8 +3,10 @@
   align-items: center;
   padding-left: 20px;
 
+  &::before,
   &::after {
     content: "";
+    display: block;
 
     flex-grow: 1;
     flex-shrink: 1;
@@ -13,6 +15,10 @@
     margin-top: 6px;
 
     background-color: $primary-color;
+  }
+
+  &::before {
+    display: none;
   }
 }
 
@@ -73,8 +79,117 @@
   color: $font-color-inverse;
 }
 
+@media (min-width: $tablet-width) {
+  .more-products__title {
+    padding: 0;
+
+    &::before {
+      display: block;
+      flex-grow: 0;
+      width: 28px;
+    }
+
+    &::before,
+    &::after {
+      margin-top: 10px;
+    }
+  }
+
+  .more-products__title-text {
+    padding-right: 40px;
+    padding-left: 39px;
+  }
+
+  .more-products__wrap {
+    margin-top: 80px;
+  }
+
+  .more-products__gift {
+    width: 708px;
+    min-height: 128px;
+    margin-top: 69px;
+    margin-bottom: 76px;
+    padding: 0;
+    padding-top: 72px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    &::before {
+      left: 91px;
+    }
+  }
+
+  .more-products__offer {
+    margin-left: 423px;
+
+    text-align: left;
+  }
+}
+
 @media (min-width: $desktop-width) {
+  .more-products {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 3px;
+
+      background-color: $primary-color;
+    }
+  }
+
+  .more-products__title {
+    width: 1260px;
+    margin: 0 auto;
+    padding-left: 40px;
+
+    background-color: $bg-color-main;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      align-self: flex-start;
+      margin-top: 22px;
+    }
+  }
+
+  .more-products__title-text {
+    max-width: 1000px;
+    padding-left: 0;
+  }
+
   .more-products__wrap {
     display: flex;
+    align-items: flex-start;
+    margin-top: 65px;
+  }
+
+  .more-products__gift {
+    width: 245px;
+    min-height: 102px;
+    margin: 0;
+    margin-top: 16px;
+    margin-left: auto;
+    padding-top: 187px;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    &::before {
+      left: 96px;
+    }
+  }
+
+  .more-products__offer {
+    margin: 0 auto;
+
+    text-align: center;
   }
 }

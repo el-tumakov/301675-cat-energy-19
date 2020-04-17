@@ -53,6 +53,7 @@
     .wrapper {
       min-width: 624px;
       padding: 0 72px;
+      padding-top: 30px;
     }
   }
 
@@ -95,6 +96,10 @@
 
     padding-top: 95px;
     padding-bottom: 105px;
+
+    .wrapper {
+      padding-top: 0;
+    }
   }
 
   .contacts__info {

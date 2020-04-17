@@ -49,6 +49,14 @@
   color: $font-color-minor;
 
   background-color: $bg-color-minor;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
