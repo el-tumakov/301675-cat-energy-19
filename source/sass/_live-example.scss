@@ -457,7 +457,9 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    min-height: 607px;
     padding-top: 38px;
+    padding-bottom: 0;
 
     border: 0;
   }
