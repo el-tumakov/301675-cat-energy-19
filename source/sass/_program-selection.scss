@@ -22,6 +22,13 @@
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
+    background-size: 320px 305px;
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .program-selection::after {
+    background-image: url("../img/index-background-mobile@2x.jpg");
   }
 }
 
@@ -98,8 +105,8 @@
 
   .program-selection__image {
     position: absolute;
-    top: 200px;
-    left: 0;
+    top: 206px;
+    left: 29px;
     z-index: -1;
 
     width: 709px;
@@ -136,6 +143,7 @@
 
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-position: -1px 0;
+      background-size: 720px 696px;
     }
 
     .wrapper {
@@ -147,13 +155,19 @@
     }
   }
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .program-selection::after {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
+  }
+
   .program-selection__title {
     padding-top: 110px;
   }
 
   .program-selection__image {
     top: 0;
-    left: 580px;
+    left: 560px;
     z-index: 1;
 
     width: 552px;
