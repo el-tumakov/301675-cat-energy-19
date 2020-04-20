@@ -1,7 +1,7 @@
 .product {
   display: flex;
   flex-wrap: wrap;
-  width: 280px;
+  justify-content: center;
   margin: 0 auto;
   padding: 0 20px;
   padding-bottom: 24px;
@@ -139,7 +139,7 @@
   }
 
   .product__button {
-    min-width: 169px;
     width: 169px;
+    min-width: 169px;
   }
 }

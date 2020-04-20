@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=44acb2c8-15fd-4632-8b6b-fa4734497ed3" type="text/javascript"></script>
 </head>
 <body class="page">
   <header class="main-header">
@@ -99,7 +100,7 @@
           <p class="advantages__description">
             Уже через месяц
             наслаждайтесь изменениями
-            к лучшему<br> вашего питомца!
+            к лучшему вашего питомца!
           </p>
         </li>
       </ul>
@@ -117,7 +118,7 @@
           </p>
           <table class="live-example__statistic">
             <tr class="live-example__row">
-              <th class="live-example__head">Снижение веса</th>
+              <th class="live-example__head live-example__head--short">Снижение веса</th>
               <td class="live-example__col">5 кг</td>
             </tr>
             <tr class="live-example__row">
@@ -132,15 +133,20 @@
         </div>
       </div>
       <div class="live-example__bottom">
-        <div class="wrapper">
-          <img class="live-example__image" src="#" alt="Изображение кота до и после">
-          <div class="live-example__compare">
-            <span class="live-example__compare-text">Было</span>
-            <div class="live-example__bar">
-              <div class="live-example__active-bar"></div>
-            </div>
-            <span class="live-example__compare-text">Стало</span>
+        <div class="live-example__wrap">
+          <div class="live-example__image-wrap live-example__image-wrap--before live-example__image-wrap--visible">
+            <img class="live-example__image live-example__image--before" src="img/before-mobile@1x.png" width="320" height="240" alt="Изображение кота до смены корма">
           </div>
+          <div class="live-example__image-wrap live-example__image-wrap--after">
+            <img class="live-example__image live-example__image--after" src="img/after-mobile@1x.png" width="320" height="240" alt="Изображение кота после смены корма">
+          </div>
+        </div>
+        <div class="live-example__compare">
+          <button class="live-example__button live-example__button--before" type="button">Было</button>
+          <div class="live-example__bar">
+            <div class="live-example__toggle"></div>
+          </div>
+          <button class="live-example__button live-example__button--after" type="button">Стало</button>
         </div>
       </div>
     </section>
@@ -151,15 +157,15 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__info">
           <p class="contacts__slogan">
-            Приглашаем к сотрудничеству дилеров!
+            Приглашаем<br> к сотрудничеству дилеров!
           </p>
           <p class="contacts__address">
             ул. Большая Конюшенная, д. 19/8
-            Санкт-Петербург
+            <span class="contacts__city">Санкт-Петербург</span>
           </p>
         </div>
       </div>
-      <img class="contacts__map" src="#" alt="Расположение офиса на карте">
+      <div class="contacts__map" id="map"></div>
     </section>
     <div class="main-footer__bottom wrapper">
       <a class="main-footer__logo">
@@ -212,6 +218,154 @@
         navMain.classList.remove('navigation--opened');
       }
     });
+  </script>
+
+  <script>
+    var MIN_LEVEL = 0;
+    var MAX_LEVEL = 100;
+    var SHIFT = 34;
+    var SHIFT_PERCENT = 3.73;
+    var TABLET_WIDTH = 768;
+    var catBefore = document.querySelector('.live-example__image-wrap--before');
+    var catAfter = document.querySelector('.live-example__image-wrap--after');
+    var bar = document.querySelector('.live-example__bar');
+    var toggle = document.querySelector('.live-example__toggle');
+    var toggleBefore = document.querySelector('.live-example__button--before');
+    var toggleAfter = document.querySelector('.live-example__button--after');
+
+    var switchSlide = function (before, after) {
+      if (catAfter.classList.contains('live-example__image-wrap--visible') && before) {
+        catBefore.classList.add('live-example__image-wrap--visible');
+        catAfter.classList.remove('live-example__image-wrap--visible');
+        toggle.setAttribute("style", "left: 7px; right: auto");
+
+      } else if (catBefore.classList.contains('live-example__image-wrap--visible') && after) {
+        catAfter.classList.add('live-example__image-wrap--visible');
+        catBefore.classList.remove('live-example__image-wrap--visible');
+        toggle.setAttribute("style", "right: 7px; left: auto");
+      }
+    };
+
+    var moveSlide = function (evt, elem, parent, firstWrap, secondWrap) {
+      evt.preventDefault();
+
+      var currentX = evt.clientX;
+
+      var mousemoveHandler = function (moveEvt) {
+        moveEvt.preventDefault();
+
+        var shift = currentX - moveEvt.clientX;
+        currentX = moveEvt.clientX;
+
+        var elementShift = elem.offsetLeft - shift;
+        var firstWrapShift = firstWrap.offsetWidth - shift;
+        var secondWrapShift = secondWrap.offsetWidth - shift;
+
+        if (elementShift <= parent.offsetWidth - SHIFT && elementShift >= MIN_LEVEL) {
+          elem.style.left = (elementShift * MAX_LEVEL / parent.offsetWidth) + '%';
+          firstWrap.style.width = MAX_LEVEL - (elementShift * MAX_LEVEL / parent.offsetWidth) - SHIFT_PERCENT + '%';
+          secondWrap.style.width = (elementShift * MAX_LEVEL / parent.offsetWidth) + SHIFT_PERCENT + '%';
+        }
+      };
+
+      var mouseupHandler = function (upEvt) {
+        upEvt.preventDefault();
+
+        document.removeEventListener('mousemove', mousemoveHandler);
+        document.removeEventListener('mouseup', mouseupHandler);
+      };
+
+      document.addEventListener('mousemove', mousemoveHandler);
+      document.addEventListener('mouseup', mouseupHandler);
+    };
+
+    toggle.addEventListener('mousedown', function (evt) {
+      if (window.innerWidth >= TABLET_WIDTH) {
+        moveSlide(evt, toggle, bar, catBefore, catAfter);
+      }
+    });
+
+    bar.addEventListener('click', function () {
+      if (window.innerWidth < TABLET_WIDTH) {
+        switchSlide(true, true);
+      }
+    });
+
+    toggleBefore.addEventListener('click', function () {
+      if (window.innerWidth < TABLET_WIDTH) {
+        switchSlide(true, false);
+      } else {
+        catBefore.style.width = '100%'
+        catAfter.style.width = '0%'
+        toggle.style.left = '0%';
+      }
+    });
+
+    toggleAfter.addEventListener('click', function () {
+      if (window.innerWidth < TABLET_WIDTH) {
+        switchSlide(false, true);
+      } else {
+        catBefore.style.width = '0%'
+        catAfter.style.width = '100%'
+        toggle.style.left = '92%';
+      }
+    });
+
+    window.addEventListener('resize', function (evt) {
+      if (window.innerWidth < TABLET_WIDTH) {
+        catBefore.classList.add('live-example__image-wrap--visible');
+        catAfter.classList.remove('live-example__image-wrap--visible');
+        catBefore.style.width = '';
+        catAfter.style.width = '';
+        toggle.style.left = '';
+      }
+    });
+  </script>
+
+  <script>
+    var TABLET_WIDTH = 768;
+    var DESKTOP_WIDTH = 1440;
+    var myMap;
+
+    // Дождёмся загрузки API и готовности DOM.
+    ymaps.ready(init);
+
+    function init () {
+      // Создание экземпляра карты и его привязка к контейнеру с
+      // заданным id ("map").
+      myMap = new ymaps.Map('map', {
+        // При инициализации карты обязательно нужно указать
+        // её центр и коэффициент масштабирования.
+        center: [59.938635, 30.323118], // Москва
+        zoom: 18,
+        controls: []
+      }),
+
+      placemark = new ymaps.Placemark(myMap.getCenter(), {
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: '../img/map-pin.png',
+        // Размеры метки.
+        iconImageSize: [124, 106],
+        iconImageOffset: [-61, -53]
+      });
+
+      if (window.innerWidth < TABLET_WIDTH) {
+        myMap.setZoom(17);
+        placemark.options.set('iconImageSize', [62, 54]);
+        placemark.options.set('iconImageOffset', [-30, -40]);
+      }
+
+      if (window.innerWidth >= DESKTOP_WIDTH) {
+        myMap.setCenter([59.939058, 30.319274], 17);
+        placemark.options.set('iconImageOffset', [-80, -130]);
+      }
+
+      myMap.geoObjects.add(placemark);
+    }
   </script>
 </body>
 </html>

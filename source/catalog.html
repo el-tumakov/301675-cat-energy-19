@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=44acb2c8-15fd-4632-8b6b-fa4734497ed3" type="text/javascript"></script>
 </head>
 <body class="page">
   <header class="main-header">
@@ -155,7 +156,7 @@
           <article class="product">
             <img class="product__image product__image--big" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Фото корма Cat Energy SLIM 1000 грамм с гречкой">
             <div class="product__info-wrap">
-              <h3 class="product__title">Cat Energy PRO 1000 г</h3>
+              <h3 class="product__title">Cat Energy SLIM 1000 г</h3>
               <table class="product__info">
                 <tr class="product__row">
                   <th class="product__row-title">Объем</th>
@@ -205,16 +206,18 @@
       </ul>
     </section>
     <section class="main-content__more-products more-products">
-      <h2 class="main-content__section-title main-content__section-title--small more-products__title">Дополнительные товары</h2>
-      <div class="more-products__wrap">
+      <h2 class="main-content__section-title main-content__section-title--small more-products__title">
+        <span class="more-products__title-text">Дополнительные товары</span>
+      </h2>
+      <div class="more-products__wrap wrapper">
         <ul class="more-products__list">
           <li class="more-products__item">
             <article class="product-small">
               <h3 class="product-small__title">Сахарозаменитель</h3>
               <table class="product-small__info">
                 <tr class="product-small__row">
-                  <td class="product-small__col">1 упакова (100 г)</td>
-                  <td class="product-small__col">200 Р.</td>
+                  <td class="product-small__col">1 упаковка (100 г)</td>
+                  <td class="product-small__col product-small__col--right">200 Р.</td>
                 </tr>
               </table>
               <button class="product-small__button button" type="button">Заказать</button>
@@ -226,7 +229,7 @@
               <table class="product-small__info">
                 <tr class="product-small__row">
                   <td class="product-small__col">5 литров</td>
-                  <td class="product-small__col">50 Р.</td>
+                  <td class="product-small__col product-small__col--right">50 Р.</td>
                 </tr>
               </table>
               <button class="product-small__button button" type="button">Заказать</button>
@@ -238,7 +241,7 @@
               <table class="product-small__info">
                 <tr class="product-small__row">
                   <td class="product-small__col">1 литр</td>
-                  <td class="product-small__col">100 Р.</td>
+                  <td class="product-small__col product-small__col--right">100 Р.</td>
                 </tr>
               </table>
               <button class="product-small__button button" type="button">Заказать</button>
@@ -250,7 +253,7 @@
               <table class="product-small__info">
                 <tr class="product-small__row">
                   <td class="product-small__col">1 упаковка (30 г)</td>
-                  <td class="product-small__col">300 Р.</td>
+                  <td class="product-small__col product-small__col--right">300 Р.</td>
                 </tr>
               </table>
               <button class="product-small__button button" type="button">Заказать</button>
@@ -259,7 +262,7 @@
         </ul>
         <div class="more-products__gift">
           <p class="more-products__offer">
-            Закажите все и получите чехол для кота в подарок!
+            Закажите все<br> и получите чехол для кота в подарок!
           </p>
         </div>
       </div>
@@ -271,15 +274,15 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__info">
           <p class="contacts__slogan">
-            Приглашаем к сотрудничеству дилеров!
+            Приглашаем<br> к сотрудничеству дилеров!
           </p>
           <p class="contacts__address">
             ул. Большая Конюшенная, д. 19/8
-            Санкт-Петербург
+            <span class="contacts__city">Санкт-Петербург</span>
           </p>
         </div>
       </div>
-      <img class="contacts__map" src="#" alt="Расположение офиса на карте">
+      <div class="contacts__map" id="map"></div>
     </section>
     <div class="main-footer__bottom wrapper">
       <a class="main-footer__logo" href="index.html">
@@ -332,6 +335,52 @@
         navMain.classList.remove('navigation--opened');
       }
     });
+  </script>
+
+  <script>
+    var TABLET_WIDTH = 768;
+    var DESKTOP_WIDTH = 1440;
+    var myMap;
+
+    // Дождёмся загрузки API и готовности DOM.
+    ymaps.ready(init);
+
+    function init () {
+      // Создание экземпляра карты и его привязка к контейнеру с
+      // заданным id ("map").
+      myMap = new ymaps.Map('map', {
+        // При инициализации карты обязательно нужно указать
+        // её центр и коэффициент масштабирования.
+        center: [59.938635, 30.323118], // Москва
+        zoom: 18,
+        controls: []
+      }),
+
+      placemark = new ymaps.Placemark(myMap.getCenter(), {
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: '../img/map-pin.png',
+        // Размеры метки.
+        iconImageSize: [124, 106],
+        iconImageOffset: [-61, -53]
+      });
+
+      if (window.innerWidth < TABLET_WIDTH) {
+        myMap.setZoom(17);
+        placemark.options.set('iconImageSize', [62, 54]);
+        placemark.options.set('iconImageOffset', [-30, -40]);
+      }
+
+      if (window.innerWidth >= DESKTOP_WIDTH) {
+        myMap.setCenter([59.939058, 30.319274], 17);
+        placemark.options.set('iconImageOffset', [-80, -130]);
+      }
+
+      myMap.geoObjects.add(placemark);
+    }
   </script>
 </body>
 </html>
