@@ -348,6 +348,8 @@
     width: 690px;
     height: 517px;
     margin-top: -170px;
+
+    transform: translateX(7px);
   }
 
   .live-example__image-wrap {
@@ -355,8 +357,15 @@
 
     display: block;
     flex-shrink: 0;
-    width: 50%;
     overflow: hidden;
+
+    &--before {
+      width: 49%;
+    }
+
+    &--after {
+      width: 51%;
+    }
   }
 
   .live-example__image {
@@ -504,7 +513,7 @@
     min-height: 370px;
     margin-top: 11px;
     padding-bottom: 44px;
-    padding-left: 43px;
+    padding-left: 33px;
   }
 
   .live-example__wrap {
@@ -512,10 +521,20 @@
     margin-left: 0;
   }
 
+  .live-example__image-wrap {
+    &--before {
+      width: 53%;
+    }
+
+    &--after {
+      width: 47%;
+    }
+  }
+
   .live-example__compare {
     margin-top: 40px;
     margin-left: 0;
-    padding-left: 77px;
+    padding-left: 87px;
   }
 
   .live-example__statistic {
