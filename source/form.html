@@ -12,7 +12,11 @@
   <header class="main-header">
     <div class="main-header__top">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип компании">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип компании">
+        </picture>
       </a>
     </div>
     <nav class="main-header__nav navigation navigation--closed navigation--nojs">
