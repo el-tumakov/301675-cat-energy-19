@@ -24,13 +24,11 @@
     margin-right: 0;
   }
 
-  svg path,
-  svg circle {
+  svg {
     fill: $font-color-minor;
   }
 
-  &:hover svg path,
-  &:hover svg circle {
+  &:hover svg {
     fill: $primary-color;
   }
 

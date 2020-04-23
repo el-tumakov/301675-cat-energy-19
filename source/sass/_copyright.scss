@@ -22,11 +22,11 @@
 }
 
 .copyright__logo {
-  svg path {
+  svg {
     fill: $font-color-minor;
   }
 
-  &:hover svg path {
+  &:hover svg {
     fill: $primary-color;
   }
 
