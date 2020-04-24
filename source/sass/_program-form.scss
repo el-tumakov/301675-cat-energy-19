@@ -204,6 +204,10 @@
 
   transform: translateY(-50%);
 
+  svg {
+    fill: #222222;
+  }
+
   &--email {
     right: 15px;
 
@@ -219,7 +223,7 @@
   }
 }
 
-.program-form__input-text:focus ~ .program-form__icon path {
+.program-form__input-text:focus ~ .program-form__icon svg {
   fill: $primary-color;
 }
 
