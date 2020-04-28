@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Католог продукции Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=44acb2c8-15fd-4632-8b6b-fa4734497ed3" type="text/javascript"></script>
 </head>
@@ -345,19 +345,19 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vk" href="#">
-              <svg width="22" height="12"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+              <svg width="22" height="12"><use xlink:href="img/sprite.svg#spr-icon-vk"></use></svg>
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--inst" href="#">
-              <svg width="16" height="16"><use xlink:href="img/sprite.svg#icon-inst"></use></svg>
+              <svg width="16" height="16"><use xlink:href="img/sprite.svg#spr-icon-insta"></use></svg>
               <span class="visually-hidden">Инстаграмм</span >
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--fb" href="#">
-              <svg width="10" height="19"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+              <svg width="10" height="19"><use xlink:href="img/sprite.svg#spr-icon-fb"></use></svg>
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
@@ -366,74 +366,13 @@
       <div class="main-footer__copyright copyright">
         <a class="copyright__company" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="26.943" height="34.09"><use xlink:href="img/sprite.svg#icon-copyright"></use></svg>
+          <svg width="27" height="34"><use xlink:href="img/sprite.svg#spr-icon-copyright"></use></svg>
           <span class="visually-hidden">Логотип разработчика</span>
         </a>
       </div>
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.navigation');
-    var navToggle = document.querySelector('.navigation__toggle');
-
-    navMain.classList.remove('navigation--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('navigation--closed')) {
-        navMain.classList.remove('navigation--closed');
-        navMain.classList.add('navigation--opened');
-      } else {
-        navMain.classList.add('navigation--closed');
-        navMain.classList.remove('navigation--opened');
-      }
-    });
-  </script>
-
-  <script>
-    var TABLET_WIDTH = 768;
-    var DESKTOP_WIDTH = 1440;
-    var myMap;
-
-    // Дождёмся загрузки API и готовности DOM.
-    ymaps.ready(init);
-
-    function init () {
-      // Создание экземпляра карты и его привязка к контейнеру с
-      // заданным id ("map").
-      myMap = new ymaps.Map('map', {
-        // При инициализации карты обязательно нужно указать
-        // её центр и коэффициент масштабирования.
-        center: [59.938635, 30.323118], // Москва
-        zoom: 18,
-        controls: []
-      }),
-
-      placemark = new ymaps.Placemark(myMap.getCenter(), {
-      }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: '../img/map-pin.png',
-        // Размеры метки.
-        iconImageSize: [124, 106],
-        iconImageOffset: [-61, -53]
-      });
-
-      if (window.innerWidth < TABLET_WIDTH) {
-        myMap.setZoom(17);
-        placemark.options.set('iconImageSize', [62, 54]);
-        placemark.options.set('iconImageOffset', [-30, -40]);
-      }
-
-      if (window.innerWidth >= DESKTOP_WIDTH) {
-        myMap.setCenter([59.939058, 30.319274], 17);
-        placemark.options.set('iconImageOffset', [-80, -130]);
-      }
-
-      myMap.geoObjects.add(placemark);
-    }
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
