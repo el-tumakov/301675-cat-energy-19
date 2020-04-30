@@ -7,6 +7,7 @@ $font-color-minor: #444444;
 $font-color-inverse: #ffffff;
 
 // Шрифт
+$font: "Oswald";
 $font-main: "Oswald", "Arial", sans-serif;
 $font-minor: "Arial", sans-serif;
 
@@ -22,7 +23,7 @@ $retina-dppx: 1.5dppx;
 
 // Миксины
 @mixin font {
-  font-family: "Oswald";
+  font-family: $font;
   font-style: normal;
   font-display: swap;
 }
