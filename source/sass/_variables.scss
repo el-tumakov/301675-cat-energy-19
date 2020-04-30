@@ -19,3 +19,10 @@ $mobile-width-only: 767px;
 // Ретина
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// Миксины
+@mixin font {
+  font-family: "Oswald";
+  font-style: normal;
+  font-display: swap;
+}
