@@ -13,6 +13,7 @@
 .catalog__more {
   padding-top: 63px;
   padding-bottom: 24px;
+  overflow: hidden;
 
   font-weight: 400;
   text-align: center;
@@ -163,5 +164,6 @@
   .catalog__show-all {
     width: 169px;
     min-width: 169px;
+    margin-bottom: 15px;
   }
 }

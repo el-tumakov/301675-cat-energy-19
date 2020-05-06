@@ -1,10 +1,12 @@
 .more-products__title-text {
   min-width: 227px;
-  padding-right: 20px;
+  max-width: 80%;
+  margin-right: 20px;
+  overflow: hidden;
 }
 
 .more-products__wrap {
-  margin-top: 34px;
+  margin-top: 31px;
 }
 
 .more-products__list {
@@ -24,6 +26,7 @@
   margin-top: 39px;
   margin-bottom: 35px;
   padding-top: 187px;
+  overflow: hidden;
 
   background-color: $primary-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
@@ -64,12 +67,13 @@
 
 @media (min-width: $tablet-width) {
   .more-products__title-text {
-    padding-right: 40px;
+    min-width: 340px;
+    margin-right: 34px;
     padding-left: 39px;
   }
 
   .more-products__wrap {
-    margin-top: 80px;
+    margin-top: 74px;
   }
 
   .more-products__gift {
@@ -108,7 +112,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 22px;
+      top: 28px;
       left: 0;
       z-index: -1;
 
@@ -127,7 +131,7 @@
   .more-products__wrap {
     display: flex;
     align-items: flex-start;
-    margin-top: 65px;
+    margin-top: 58px;
   }
 
   .more-products__gift {

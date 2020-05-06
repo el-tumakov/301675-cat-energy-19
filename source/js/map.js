@@ -1,6 +1,6 @@
 (function () {
   var TABLET_WIDTH = 768;
-  var DESKTOP_WIDTH = 1440;
+  var DESKTOP_WIDTH = 1300;
   var myMap;
 
   // Дождёмся загрузки API и готовности DOM.

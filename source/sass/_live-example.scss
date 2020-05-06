@@ -2,6 +2,7 @@
   min-height: 665px;
   padding-top: 10px;
   padding-bottom: 30px;
+  overflow: hidden;
 
   font-weight: 400;
 
@@ -57,10 +58,13 @@
     display: block;
     width: auto;
     min-height: auto;
-    margin: 0 auto;
     padding-top: 0;
 
     border: 0;
+  }
+
+  &--food:nth-child(1n) {
+    margin: 0 auto;
   }
 }
 
@@ -82,7 +86,6 @@
 
   &--food {
     display: table-cell;
-    width: auto;
   }
 
   &::before,
@@ -115,24 +118,29 @@
   width: 82px;
   margin-bottom: 7px;
   padding: 0;
+  overflow: hidden;
 
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-
-  &--food {
-    width: auto;
-  }
 }
 
 .live-example__head--food,
 .live-example__col--food {
+  width: auto;
+  max-width: 140px;
+  overflow: hidden;
+
   font-size: 14px;
   line-height: 20px;
   font-family: $font-main;
   text-transform: uppercase;
   text-align-last: left;
+}
+
+.live-example__head-text {
+  overflow: hidden;
 }
 
 .live-example__wrap {
@@ -222,7 +230,7 @@
 
 @media (min-width: $tablet-width) {
   .live-example {
-    padding-top: 33px;
+    padding-top: 24px;
     padding-bottom: 0;
 
     background-color: $bg-color-main;
@@ -230,7 +238,7 @@
   }
 
   .live-example__title {
-    margin-bottom: 64px;
+    margin-bottom: 55px;
   }
 
   .live-example__description {
@@ -267,6 +275,7 @@
       margin: 0;
       margin-left: auto;
       padding: 0;
+      overflow: hidden;
     }
   }
 
@@ -279,10 +288,11 @@
 
     &--food {
       width: auto;
-      margin-top: 11px;
+      max-width: 100%;
+      margin-top: 10px;
 
       font-size: 20px;
-      line-height: 20px;
+      line-height: 22px;
     }
 
     &--short {
@@ -327,10 +337,11 @@
     &--food {
       order: 1;
       width: auto;
-      margin-top: 14px;
+      max-width: 100%;
+      margin-top: 12px;
 
       font-size: 20px;
-      line-height: 20px;
+      line-height: 22px;
     }
   }
 
@@ -468,10 +479,19 @@
     flex-wrap: wrap;
     align-content: flex-start;
     min-height: 607px;
-    padding-top: 38px;
+    padding-top: 28px;
     padding-bottom: 0;
+    overflow: visible;
 
     border: 0;
+  }
+
+  .live-example__title {
+    width: 750px;
+    margin-bottom: 55px;
+    overflow: hidden;
+
+    line-height: 78px;
   }
 
   .live-example__description {
@@ -550,17 +570,23 @@
   .live-example__row--food {
     flex-direction: row;
     align-items: center;
-    width: 327px;
+    width: 100%;
     min-height: auto;
-    margin-top: 28px;
-    margin-left: 0;
+    overflow: visible;
+
+    &:nth-child(1n) {
+      margin-top: 28px;
+      margin-left: 0;
+    }
   }
 
   .live-example__head--food {
     display: block;
     flex-shrink: 0;
-    width: 195px;
+    min-width: 195px;
+    max-width: 290px;
     margin: 0;
+    overflow: hidden;
 
     text-align: left;
   }
@@ -568,7 +594,7 @@
   .live-example__col--food {
     display: block;
     flex-shrink: 0;
-    max-width: 280px;
+    max-width: 198px;
     margin: 0;
     margin-left: 42px;
 

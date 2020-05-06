@@ -3,6 +3,7 @@
   margin-bottom: 20px;
   padding: 20px;
   padding-top: 30px;
+  overflow: hidden;
 
   font-weight: 400;
   color: $font-color-main;
@@ -120,10 +121,14 @@
     padding-left: 53px;
   }
 
+  .program-unit__wrap {
+    width: 60%;
+    overflow: hidden;
+  }
+
   .program-unit__title {
     position: static;
 
-    width: 60%;
     margin-bottom: 26px;
     padding: 0;
 
@@ -162,18 +167,15 @@
   }
 
   .program-unit__description {
-    width: 60%;
-
     font-size: 16px;
     line-height: 24px;
 
     &--short {
-      width: 54%;
+      width: 90%;
     }
   }
 
   .program-unit__link {
-    width: 50%;
     margin-top: 36px;
 
     font-size: 20px;
@@ -191,12 +193,17 @@
   .program-unit {
     position: static;
 
-    display: flex;
-    flex-direction: column;
     width: 464px;
     min-height: 243px;
     padding: 53px;
     padding-top: 77px;
+  }
+
+  .program-unit__wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: visible;
   }
 
   .program-unit__title {
