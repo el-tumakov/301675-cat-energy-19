@@ -191,6 +191,10 @@
     border: 2px solid $font-color-minor;
     outline: 0;
   }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #ff8282;
+  }
 }
 
 .program-form__input-text::placeholder,
@@ -225,6 +229,10 @@
 
 .program-form__input-text:focus ~ .program-form__icon svg {
   fill: $primary-color;
+}
+
+.program-form__input-text:invalid:not(:placeholder-shown) ~ .program-form__icon svg {
+  fill: #ff8282;
 }
 
 .program-form__comment {
