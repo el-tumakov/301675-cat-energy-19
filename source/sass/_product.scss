@@ -53,6 +53,7 @@
   overflow: hidden;
 
   font-weight: inherit;
+  text-align: left;
 }
 
 .product__col {
@@ -118,6 +119,7 @@
 
   .product__row {
     width: 250px;
+    height: 1px;
     min-height: 31px;
 
     border-bottom: 1px solid #cdcdcd;

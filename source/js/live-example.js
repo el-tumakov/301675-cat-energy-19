@@ -97,13 +97,15 @@
     });
   }
 
-  window.addEventListener('resize', function (evt) {
-    if (window.innerWidth < TABLET_WIDTH) {
-      catBefore.classList.add('live-example__image-wrap--visible');
-      catAfter.classList.remove('live-example__image-wrap--visible');
-      catBefore.style.width = '';
-      catAfter.style.width = '';
-      toggle.style.left = '';
-    }
-  });
+  if (catBefore) {
+    window.addEventListener('resize', function (evt) {
+      if (window.innerWidth < TABLET_WIDTH) {
+        catBefore.classList.add('live-example__image-wrap--visible');
+        catAfter.classList.remove('live-example__image-wrap--visible');
+        catBefore.style.width = '';
+        catAfter.style.width = '';
+        toggle.style.left = '';
+      }
+    });
+  }
 })();
