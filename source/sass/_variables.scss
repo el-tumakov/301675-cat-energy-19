@@ -7,15 +7,23 @@ $font-color-minor: #444444;
 $font-color-inverse: #ffffff;
 
 // Шрифт
+$font: "Oswald";
 $font-main: "Oswald", "Arial", sans-serif;
 $font-minor: "Arial", sans-serif;
 
 // Брэйкпоинты
 $mobile-width: 320px;
 $tablet-width: 768px;
-$desktop-width: 1440px;
+$desktop-width: 1300px;
 $mobile-width-only: 767px;
 
 // Ретина
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// Миксины
+@mixin font {
+  font-family: $font;
+  font-style: normal;
+  font-display: swap;
+}

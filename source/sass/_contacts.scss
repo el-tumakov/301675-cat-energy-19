@@ -18,7 +18,8 @@
 .contacts__slogan {
   display: block;
   flex-shrink: 0;
-  width: 125px;
+  width: 45%;
+  overflow: hidden;
 
   font-size: 16px;
   line-height: 20px;
@@ -30,10 +31,12 @@
   width: 140px;
   margin-top: 16px;
   margin-left: auto;
+  overflow: hidden;
 
   font-size: 14px;
   line-height: 20px;
   font-family: $font-minor;
+  text-align: left;
   color: $font-color-minor;
 }
 
@@ -71,14 +74,14 @@
   }
 
   .contacts__slogan {
-    width: 170px;
+    width: 60%;
 
     font-size: 20px;
     line-height: 25px;
   }
 
   .contacts__address {
-    width: 160px;
+    width: 40%;
     margin-top: 18px;
 
     font-size: 16px;
@@ -114,7 +117,8 @@
     padding-bottom: 105px;
 
     .wrapper {
-      padding-top: 0;
+      width: 1220px;
+      padding: 0 40px;
     }
   }
 
@@ -131,7 +135,12 @@
     background-color: $bg-color-main;
   }
 
+  .contacts__slogan {
+    width: 55%;
+  }
+
   .contacts__address {
+    width: 39%;
     text-align: left;
   }
 

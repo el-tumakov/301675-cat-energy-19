@@ -24,6 +24,10 @@
   list-style: none;
 }
 
+.navigation__item {
+  overflow: hidden;
+}
+
 .navigation__link {
   display: block;
   min-height: 21px;
@@ -107,7 +111,7 @@
   }
 
   .navigation__item {
-    margin-left: 32px;
+    margin-left: 34px;
   }
 
   .navigation__link {

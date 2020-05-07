@@ -14,6 +14,10 @@
   height: 144px;
 }
 
+.product__info-wrap {
+  overflow: hidden;
+}
+
 .product__title {
   width: 75px;
   margin-top: 21px;
@@ -44,9 +48,12 @@
 
 .product__row-title {
   display: block;
+  width: 50%;
   padding: 0;
+  overflow: hidden;
 
   font-weight: inherit;
+  text-align: left;
 }
 
 .product__col {
@@ -54,6 +61,7 @@
   flex-shrink: 0;
   width: 45px;
   padding: 0;
+  overflow: hidden;
 
   text-align: right;
 }
@@ -111,6 +119,7 @@
 
   .product__row {
     width: 250px;
+    height: 1px;
     min-height: 31px;
 
     border-bottom: 1px solid #cdcdcd;
@@ -147,6 +156,10 @@
     margin-top: 37px;
   }
 
+  .product__info {
+    margin-top: 20px;
+  }
+
   .product__row {
     width: 169px;
   }
@@ -154,6 +167,6 @@
   .product__button {
     width: 169px;
     min-width: 169px;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 }

@@ -30,14 +30,14 @@
 
 @media (min-width: $tablet-width) {
   .main-footer {
-    padding-bottom: 56px;
+    padding-bottom: 54px;
   }
 
   .main-footer__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 54px;
+    padding-top: 52px;
   }
 
   .main-footer__social {
@@ -58,7 +58,7 @@
   .main-footer__bottom {
     position: relative;
     z-index: 1;
-    padding-top: 57px;
+    padding-top: 53px;
   }
 
   .main-footer__logo {

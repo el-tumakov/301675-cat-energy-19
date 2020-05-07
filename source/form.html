@@ -5,7 +5,6 @@
   <title>Подбор программы для вашего питомца от Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap&subset=cyrillic" rel="stylesheet">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=44acb2c8-15fd-4632-8b6b-fa4734497ed3" type="text/javascript"></script>
 </head>
 <body class="page">
@@ -13,7 +12,7 @@
     <div class="main-header__top">
       <a class="main-header__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
           <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип компании">
         </picture>
@@ -39,14 +38,14 @@
   <main class="main-content">
     <section class="main-content__form program-form">
       <div class="wrapper">
-        <h1 class="main-content__section-title">Подбор программы</h1>
+        <h1 class="main-content__section-title main-content__section-title--form">Подбор программы</h1>
         <p class="program-form__description">
-          Заполните анкету и мы подберем программу питания для вашего кота
+          Заполните анкету и мы подберем<br> программу питания для вашего кота
         </p>
       </div>
       <form class="program-form__form" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset class="program-form__fieldset program-form__fieldset--no-title program-form__fieldset--info">
-          <h2 class="program-form__legend visually-hidden">Информация о коте</h2>
+          <h2 class="visually-hidden">Информация о коте</h2>
           <div class="program-form__wrap program-form__wrap--info">
             <div class="program-form__input-wrap">
               <label class="program-form__label program-form__label--text" for="cat-name" >Имя:*</label>
@@ -54,16 +53,16 @@
             </div>
             <div class="program-form__input-wrap">
               <label class="program-form__label program-form__label--text" for="cat-weight">Вес (кг):*</label>
-              <input class="program-form__input-text" id="cat-weight" type="text" name="cat-weight" placeholder="7" required>
+              <input class="program-form__input-text" id="cat-weight" type="number" name="cat-weight" placeholder="7" required>
             </div>
             <div class="program-form__input-wrap">
               <label class="program-form__label program-form__label--text" for="cat-age">Возраст (лет):</label>
-              <input class="program-form__input-text" id="cat-age" type="text" name="cat-age" placeholder="7">
+              <input class="program-form__input-text" id="cat-age" type="number" name="cat-age" placeholder="7">
             </div>
           </div>
         </fieldset>
         <fieldset class="program-form__fieldset program-form__fieldset--no-title program-form__fieldset--purpose">
-          <h2 class="program-form__legend visually-hidden">Цель программы</h2>
+          <h2 class="visually-hidden">Цель программы</h2>
           <div class="program-form__wrap program-form__wrap--purpose">
             <input class="program-form__input-radio visually-hidden" id="lose-weight" type="radio" name="purpose" value="lose-weight" checked>
             <label class="program-form__label program-form__label--radio" for="lose-weight">Похудение</label>
@@ -74,7 +73,7 @@
           </div>
         </fieldset>
         <fieldset class="program-form__fieldset program-form__fieldset--contacts">
-          <h2 class="main-content__section-title--small program-form__legend">
+          <h2 class="main-content__section-title main-content__section-title--small program-form__legend">
             <span class="program-form__legend-text program-form__legend-text--contacts">Контактные данные (владельца кота)</span>
           </h2>
           <div class="program-form__wrap program-form__wrap--contacts">
@@ -95,7 +94,7 @@
           </div>
         </fieldset>
         <fieldset class="program-form__fieldset program-form__fieldset--comment">
-          <h2 class="main-content__section-title--small program-form__legend">
+          <h2 class="main-content__section-title main-content__section-title--small program-form__legend">
             <span class="program-form__legend-text">Комментарий</span>
           </h2>
           <div class="program-form__wrap program-form__wrap--comment">
@@ -103,7 +102,7 @@
           </div>
         </fieldset>
         <fieldset class="program-form__fieldset program-form__fieldset--addit">
-          <h2 class="main-content__section-title--small program-form__legend program-form__legend--addit">
+          <h2 class="main-content__section-title main-content__section-title--small program-form__legend program-form__legend--addit">
             <span class="program-form__legend-text">Дополнительно</span>
           </h2>
           <div class="program-form__wrap program-form__wrap--addit">
@@ -130,10 +129,10 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__info">
           <p class="contacts__slogan">
-            Приглашаем<br> к сотрудничеству дилеров!
+            Приглашаем<br> к сотрудничеству<br> дилеров!
           </p>
           <p class="contacts__address">
-            ул. Большая Конюшенная, д. 19/8
+            ул. Большая<br> Конюшенная, д. 19/8 <br>
             <span class="contacts__city">Санкт-Петербург</span>
           </p>
         </div>
