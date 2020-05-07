@@ -13,6 +13,7 @@
 .catalog__more {
   padding-top: 63px;
   padding-bottom: 24px;
+  overflow: hidden;
 
   font-weight: 400;
   text-align: center;
@@ -134,7 +135,7 @@
 @media (min-width: $desktop-width) {
   .catalog__list {
     width: 1220px;
-    padding: 0 110px;
+    padding: 0 40px;
     padding-top: 134px;
   }
 
@@ -163,5 +164,6 @@
   .catalog__show-all {
     width: 169px;
     min-width: 169px;
+    margin-bottom: 15px;
   }
 }

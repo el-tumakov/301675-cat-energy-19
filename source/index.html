@@ -12,7 +12,7 @@
     <div class="main-header__top">
       <a class="main-header__logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
           <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип компании">
         </picture>
@@ -38,13 +38,15 @@
   <main class="main-content">
     <section class="main-content__program-selection program-selection">
       <div class="program-selection__wrapper wrapper">
-        <h1 class="program-selection__title">Функциональное питание для котов</h1>
-        <p class="program-selection__slogan">Занялся собой? Займись котом!</p>
+        <div class="program-selection__text-wrap">
+          <h1 class="program-selection__title">Функциональное питание для котов</h1>
+          <p class="program-selection__slogan">Занялся собой? Займись котом!</p>
+        </div>
         <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
-          <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
           <img class="program-selection__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Упаковка Cat Energy Pro с курицей, 500г">
         </picture>
@@ -56,28 +58,32 @@
       <ul class="programs__list">
         <li class="programs__item">
           <article class="program-unit">
-            <h3 class="program-unit__title program-unit__title--slim">Похудение</h3>
-            <p class="program-unit__description">
-              Ваш кот весит больше собаки и
-              почти утратил способность лазить
-              по деревьям? Пора на диету! Cat
-              Energy Slim поможет вашему
-              питомцу сбросить лишний вес.
-            </p>
-            <a class="program-unit__link" href="catalog.html">Каталог Slim</a>
+            <div class="program-unit__wrap">
+              <h3 class="program-unit__title program-unit__title--slim">Похудение</h3>
+              <p class="program-unit__description">
+                Ваш кот весит больше собаки и
+                почти утратил способность лазить
+                по деревьям? Пора на диету! Cat
+                Energy Slim поможет вашему
+                питомцу сбросить лишний вес.
+              </p>
+              <a class="program-unit__link" href="catalog.html">Каталог Slim</a>
+            </div>
           </article>
         </li>
         <li class="programs__item">
           <article class="program-unit">
-            <h3 class="program-unit__title program-unit__title--pro">Набор массы</h3>
-            <p class="program-unit__description program-unit__description--short">
-              Заработать авторитет среди
-              дворовых котов и даже собак?
-              Серия Cat Energy Pro поможет
-              вашему коту нарастить
-              необходимые мышцы!
-            </p>
-            <a class="program-unit__link" href="catalog.html">Каталог Pro</a>
+            <div class="program-unit__wrap">
+              <h3 class="program-unit__title program-unit__title--pro">Набор массы</h3>
+              <p class="program-unit__description program-unit__description--short">
+                Заработать авторитет среди
+                дворовых котов и даже собак?
+                Серия Cat Energy Pro поможет
+                вашему коту нарастить
+                необходимые мышцы!
+              </p>
+              <a class="program-unit__link" href="catalog.html">Каталог Pro</a>
+            </div>
           </article>
         </li>
       </ul>
@@ -128,11 +134,11 @@
           </p>
           <table class="live-example__statistic">
             <tr class="live-example__row">
-              <th class="live-example__head live-example__head--short">Снижение веса</th>
+              <th class="live-example__head live-example__head--short"><span class="live-example__head-text">Снижение веса</span></th>
               <td class="live-example__col">5 кг</td>
             </tr>
             <tr class="live-example__row">
-              <th class="live-example__head">Затрачено времени</th>
+              <th class="live-example__head"><span class="live-example__head-text">Затрачено времени</span></th>
               <td class="live-example__col">60 дней</td>
             </tr>
             <tr class="live-example__row live-example__row--food">
@@ -146,20 +152,20 @@
         <div class="live-example__wrap">
           <div class="live-example__image-wrap live-example__image-wrap--before live-example__image-wrap--visible">
             <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img class="live-example__image live-example__image--before" src="img/before-mobile@1x.png" width="320" height="240" srcset="img/before-mobile@2x.png 2x," alt="Изображение кота до смены корма">
+              <img class="live-example__image live-example__image--before" src="img/before-mobile@1x.png" width="320" height="240" srcset="img/before-mobile@2x.png 2x" alt="Изображение кота до смены корма">
             </picture>
           </div>
           <div class="live-example__image-wrap live-example__image-wrap--after">
             <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@1x.png 2x">
               <img class="live-example__image live-example__image--after" src="img/after-mobile@1x.png" width="320" height="240" srcset="img/after-mobile@2x.png 2x" alt="Изображение кота после смены корма">
             </picture>
@@ -181,10 +187,10 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__info">
           <p class="contacts__slogan">
-            Приглашаем<br> к сотрудничеству дилеров!
+            Приглашаем<br> к сотрудничеству<br> дилеров!
           </p>
           <p class="contacts__address">
-            ул. Большая Конюшенная, д. 19/8
+            ул. Большая<br> Конюшенная, д. 19/8 <br>
             <span class="contacts__city">Санкт-Петербург</span>
           </p>
         </div>
