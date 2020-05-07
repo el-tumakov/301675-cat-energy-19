@@ -350,7 +350,7 @@
     margin-top: 221px;
     padding-top: 2px;
 
-    background-color: $bg-color-minor;
+    background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
   .live-example__wrap {
@@ -522,7 +522,7 @@
     margin-right: auto;
     padding: 0;
 
-    background-color: $bg-color-minor;
+    background: linear-gradient(to right, #f2f2f2 403px, #eaeaea 403px);
   }
 
   .live-example__middle,

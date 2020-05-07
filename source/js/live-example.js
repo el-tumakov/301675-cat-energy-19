@@ -15,16 +15,16 @@
     if (catAfter.classList.contains('live-example__image-wrap--visible') && before) {
       catBefore.classList.add('live-example__image-wrap--visible');
       catAfter.classList.remove('live-example__image-wrap--visible');
-      toggle.setAttribute("style", "left: 7px; right: auto");
+      toggle.setAttribute('style', 'left: 7px; right: auto');
 
     } else if (catBefore.classList.contains('live-example__image-wrap--visible') && after) {
       catAfter.classList.add('live-example__image-wrap--visible');
       catBefore.classList.remove('live-example__image-wrap--visible');
-      toggle.setAttribute("style", "right: 7px; left: auto");
+      toggle.setAttribute('style', 'right: 7px; left: auto');
     }
   };
 
-  var moveSlide = function (evt, elem, parent, firstWrap, secondWrap) {
+  var moveSlide = function (evt, elem, parent, firstWrap, secondWrap, mainWrap) {
     evt.preventDefault();
 
     var currentX = evt.clientX;
